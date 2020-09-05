@@ -25,8 +25,10 @@ const expectedResult = {
 
 const toDict = (obj) =>
   obj.names.reduce(
-    (acc, key, i) => Object.assign(acc, { [key]: obj.values[i] }),
-    {}
+    (acc, key, i) => {
+      acc[key] = obj.values[i];
+      return acc;
+    }, {}
   );
 
 test("toDict", () => {
