@@ -4,5 +4,5 @@ export const get = (obj, path) =>
     .reduce(
       (acc, node) =>
         acc && node in acc ? ((acc = acc[node]), acc) : undefined,
-      obj
+      { ...obj }
     );
