@@ -1,5 +1,5 @@
 const getRandomBit = () =>
-  Math.round(Math.random(1) * 256)
+  Math.round(Math.random(1) * 255)
     .toString(16)
     .padStart(2, "0");
 
