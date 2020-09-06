@@ -5,7 +5,7 @@ export const rle = (str) => {
       `Incorrect input. Only English letters are alowwed. ${str} givven`
     );
   }
-  return str.replace(/(.)\1+/, (group) => group[0] + group.length);
+  return str.replace(/(.)\1+/g, (group) => group[0] + group.length);
 };
 
 // Should be faster
